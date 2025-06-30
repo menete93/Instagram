@@ -38,7 +38,7 @@ const style = StyleSheet.create({
     textAlign: 'center',
   },
   statType: {
-    fontFamily: 'Inter_18pt-Bold',
+    fontFamily: 'Inter_28pt-Light',
     color: '#022150',
     fontSize: scaleFontSize(16),
   },

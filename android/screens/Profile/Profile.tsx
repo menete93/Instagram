@@ -5,6 +5,7 @@ import globalStyle from '../../../assets/styles/globalStyle';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Image, Text, View } from 'react-native';
 import style from './style';
+import { ProfileTabsNavigation } from './../../navigation/MainNavigation';
 // import { useNavigation } from '@react-navigation/native';
 // import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { RootStackParamList } from '../../navigation/Routes'; // ajuste o caminho conforme seu projeto
@@ -36,13 +37,14 @@ const Profile = () => {
             <Text style={style.statAmount}>30M</Text>
             <Text style={style.statType}>Followers</Text>
           </View>
-
           <View style={style.statBorder} />
-
           <View>
             <Text style={style.statAmount}>100</Text>
             <Text style={style.statType}>Posts</Text>
           </View>
+        </View>
+        <View style={{ flex: 1 }}>
+          <ProfileTabsNavigation />
         </View>
       </ScrollView>
     </SafeAreaView>
