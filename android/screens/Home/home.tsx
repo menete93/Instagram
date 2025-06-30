@@ -15,9 +15,9 @@ import Style from './style';
 import UserStory from '../../components/userStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import { horizontalScale, scaleFontSize } from '../../../assets/styles/scaling';
-import { RootStackParamList, Routes } from '../../navigation/Routes';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+// import { RootStackParamList, Routes } from '../../navigation/Routes';
+// import { useNavigation } from '@react-navigation/native';
+// import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type UserStoryType = {
   id: number;
@@ -37,10 +37,10 @@ type UserPostType = {
   UserProfileImage: ImageSourcePropType;
 };
 
-type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+// type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const Home = () => {
-  const navigation = useNavigation<NavigationProp>(); // ✅ Dentro do componente
+  // const navigation = useNavigation<NavigationProp>(); // ✅ Dentro do componente
 
   const userStories: UserStoryType[] = useMemo(
     () => [
@@ -251,12 +251,7 @@ const Home = () => {
             {/* Cabeçalho com título e ícone */}
             <View style={Style.header}>
               <Title title="Let's Explore" />
-              <TouchableOpacity
-                style={Style.messageIcon}
-                onPress={() => {
-                  navigation.navigate(Routes.Profile);
-                }}
-              >
+              <TouchableOpacity style={Style.messageIcon}>
                 <Icon
                   name="envelope"
                   size={scaleFontSize(15)}
